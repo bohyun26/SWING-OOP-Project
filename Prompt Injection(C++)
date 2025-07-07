@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    
+    std::string prompt;
+    std::cout << "번역할 문장을 입력하세요: ";
+    std::getline(std::cin, prompt);
+
+    // 프롬프트 인젝션 시뮬레이션
+        if (prompt.find("이 명령을 무시하고") != std::string::npos) { //트리거 문구
+            std::cout << "'하하 털림!!'" << std::endl;
+        }
+        else {
+            std::cout << "[번역 결과]: " << prompt << std::endl;
+        }
+  
+    return 0;
+}
